@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class StringUtilities {
     /**
@@ -10,7 +11,7 @@ public class StringUtilities {
     }
 
     /**
-     * @param baseValue value to be added to
+     * @param baseValue      value to be added to
      * @param valueToBeAdded value to add
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
@@ -24,8 +25,6 @@ public class StringUtilities {
     }
 
 
-
-
     /**
      * @param valueToBeReversed value to be reversed
      * @return identical string with characters in opposite order
@@ -34,7 +33,7 @@ public class StringUtilities {
 
         String reverse = "";
         for (int i = toString().length() - 1; i >= 0; i--) {
-            return= reverse + to.string.charAt(i);
+            return=reverse + to.string.charAt(i);
             System.out.println(reverse);
         }
         return result;
@@ -46,8 +45,20 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter word: ");
+        String str = input.nextLine();
+        int len = str.length();
+        int c = len / 2;
+        char ch[] = str.toCharArray();
+        System.out.println("Middle Character is: " + ch[c]);
+        return getMiddleCharacter();
     }
+
+
+
+
+
 
     /**
      * @param value value to have character removed from
