@@ -16,28 +16,26 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        String part1 = "Star";
-        String part2 = "Tetrahedron";
-        String full = part1 + part2;
-
-        System.out.println(full);
-        return full;
+          return baseValue.concat(valueToBeAdded);
+//        return baseValue += valueToBeAdded;
     }
-
 
     /**
      * @param valueToBeReversed value to be reversed
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
+        return new StringBuilder(valueToBeReversed).reverse().toString();
 
-        String reverse = "";
-        for (int i = toString().length() - 1; i >= 0; i--) {
-            return=reverse + to.string.charAt(i);
-            System.out.println(reverse);
-        }
-        return result;
+//        String reverse = "";
+//        for (int i = toString().length() - 1; i >= 0; i--) {
+//            reverse += valueToBeReversed.charAt(i);
+//
+//        }
+//        return reverse;
     }
+
+
 
 
     /**
@@ -45,17 +43,15 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter word: ");
-        String str = input.nextLine();
-        int len = str.length();
-        int c = len / 2;
-        char ch[] = str.toCharArray();
-        System.out.println("Middle Character is: " + ch[c]);
-        return getMiddleCharacter();
+        return word.charAt(word.length() / 2);
     }
 
-
+//        Scanner input = new Scanner(System.in);
+//
+//        int len = word.length();
+//        int c = len / 2;
+//
+//        return word.charAt(c);
 
 
 
@@ -66,7 +62,13 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        String s="" +charToRemove;
+        String replace= "";
+        String strNew= value.replace(s, replace);
+        return strNew;
+
+
+
     }
 
     /**
