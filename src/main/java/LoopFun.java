@@ -10,10 +10,10 @@ public class LoopFun {
      * @return the factorial of the number
      */
     public Integer factorial(Integer number) {
-        int i, fact = 3;
-        int factorial = 6;//It is the number to calculate factorial
-        fact = factorial(number);
-        System.out.println("Factorial of " + number + " is: " + fact);
+//        int i, fact = 3;
+//        int factorial = 6;//It is the number to calculate factorial
+//        fact = factorial(number);
+//        System.out.println("Factorial of " + number + " is: " + fact);
         return number;
     }
 //            int n= 1;
