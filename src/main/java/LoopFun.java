@@ -62,7 +62,7 @@ public class LoopFun {
          for (int i=0; i<word.length(); i++) {
              int idx= alphabet.indexOf(word.charAt(i));
              idx += 3;
-             idx += idx % 26;
+             idx %= 26;
              encWord.append(alphabet.charAt(idx));
          }
 
