@@ -10,11 +10,11 @@ public class LoopFun {
      * @return the factorial of the number
      */
     public Integer factorial(Integer number) {
-//        int i, fact = 3;
-//        int factorial = 6;//It is the number to calculate factorial
-//        fact = factorial(number);
-//        System.out.println("Factorial of " + number + " is: " + fact);
-        return number;
+         int f = 1;
+         for (int i=1; i<= number; i++) {
+             f=f*i ;
+         }
+        return f;
     }
 //            int n= 1;
 //              if (n == 1)
@@ -34,28 +34,13 @@ public class LoopFun {
      * @return Upper case string of the first letter of each word
      */
     public String acronym(String phrase) {
-//        String output = "";
-//        output += phrase.charAt(0);
-//        for (int i = 1; i < phrase.length(); i++) {
-//            if (Character.isWhitespace(phrase.charAt(i))) {
-//                output = output + phrase.charAt(i);
-//                output += phrase.charAt(i + 1);
-//            }
-//            return output.replaceAll("\\s+", "").toUpperCase();
-//        }
-//
-//        public String acronym(String[] phrase){
-//            System.out.print(acronym("Ruby on Rails"));
-//        }
-//    }
-            String acronym = "Ruby on Rails";
+      String[] sentence= phrase.split (" ");
+        String result="";
+        for (String s : sentence) {
+            result= result + s.charAt(0);
+        }
 
-            String text = " ";
-            for (char c : acronym.toCharArray())
-                if (Character.isUpperCase(c))
-                    acronym += c;
-            System.out.println(acronym);
-            return acronym;
+            return result.toUpperCase();
         }
 
 
@@ -72,11 +57,15 @@ public class LoopFun {
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
+         String alphabet= "abcdefghijklmnopqrstuvwxyz";
+         StringBuilder encWord= new StringBuilder();
+         for (int i=0; i<word.length(); i++) {
+             int idx= alphabet.indexOf(word.charAt(i));
+             idx += 3;
+             idx += idx % 26;
+             encWord.append(alphabet.charAt(idx));
+         }
 
-
-
-
-
-          return null;
+          return encWord.toString();
       }
 }
